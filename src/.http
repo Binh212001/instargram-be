@@ -1,0 +1,90 @@
+POST  http://localhost:4040/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "Binh",
+    "lastName":"Pham Ngoc",
+    "email":"abc@cc.coma",
+    "password":"aaaaa"
+}
+
+###
+
+
+POST  http://localhost:4040/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email":"abc@cc.com",
+    "password":"aaaaa"
+}
+
+### Add remove friend
+
+PUT http://localhost:4040/api/v1/friend/action
+Content-Type: application/json
+
+{
+    "userId":"6401bf7c2edcc8aacec3abec", 
+    "friendId":"asdghhajsd"
+}
+
+
+### new post 
+
+
+POST http://localhost:4040/api/v1/post/create
+Content-Type: application/json
+
+{
+    "userId":"63fb61863bbed6c4a957b2be", 
+    "firstName": "Binh",
+    "lastName":"Pham Ngoc",
+    "description":"em chào các anh em mới học hết lớp 8 hiện tại đã 20 tuổi rất yêu lập trình tiếng anh nói chung cũng khá học thử F8 cũng làm dc bài tập ok nhưng mà e cũng học fullstack 2 năm ở VTC academy  86tr nhưng đống 2 lần đã đống 1 lần em định về quê học với F8 có phải là sự lựa chọn đúng đắng không với lại 1 số lý do em uể oải ko đi làm thêm dc để duy trì tiền trọ ăn uống không biết là em về quê học ở F8 có phải là lựa chọn ngốc ngếch không ạ em xin cảm ơn các anh nhiều ạ nhớ cho em ý kiến ở bình luận ạ "
+}
+### update Post
+PUT http://localhost:4040/api/v1/post/update
+Content-Type: application/json
+
+{
+    "postId":"63fb6a35b112f0b0b325341e",
+    "userId":"63fb61863bbed6c4a957b2be", 
+    "firstName": "Binh",
+    "lastName":"Pham Ngoc",
+    "description":"Free your curiosity. Learn without limits. Join millions of students learning on their own schedule. 30-day satisfaction guarantee. Shop now."
+}
+
+###delete post
+
+DELETE http://localhost:4040/api/v1/post/remove
+Content-Type: application/json
+
+{
+    "postId":"63fb6b0ab112f0b0b3253426",
+    "userId":"63fb61863bbed6c4a957b2be" ,
+    "picturePath":"1677836156328p10.jpeg"
+}
+
+###get List post
+
+GET  http://localhost:4040/api/v1/post/list?page=1
+Content-Type: application/json
+
+
+###get  My post
+
+GET  http://localhost:4040/api/v1/post/yourself/?page=1&userId=64021866a2b2a915d54de238
+Content-Type: application/json
+
+###
+
+GET  http://localhost:4040/api/v1/friend/?userId=6401bf7c2edcc8aacec3abec
+Content-Type: application/json
+
+###
+GET  http://localhost:4040/api/v1/user/?userId=6401bf7c2edcc8aacec3abec
+Content-Type: application/json
+
+###
+PUT  http://localhost:4040/api/v1/post/like?userId=6401bf7c2edcc8aacec3abec&postId=6401c2fa09e4020f0b9e38a9
+Content-Type: application/json
